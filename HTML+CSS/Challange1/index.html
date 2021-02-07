@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: 100%;
+  height: 500px;
+}       
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}       
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div style="cursor: pointer;" onclick="theFunction('1')">
+      <img class="center" src="https://i.pinimg.com/474x/5c/fd/a0/5cfda023aa7e5b3620b3669c3a2cd1f7.jpg" class="img-responsive" />
+      <h5>Pemandangan Pertama</h5>
+      <small style="font-size: 15px;">gambar ini adalah gambar sawah yang hijaugambar ini adalah gambar sawah yang hijaugambar ini adalah gambar sawah yang hijaugambar ini adalah gambar sawah yang hijau</small>
+  </div>
+  <div style="cursor: pointer;" onclick="theFunction('2')">
+    <img class="center" src="https://i.pinimg.com/474x/5c/fd/a0/5cfda023aa7e5b3620b3669c3a2cd1f7.jpg" class="img-responsive" />
+    <h5>Pemandangan kedua</h5>
+    <small style="font-size: 15px;">gambar ini adalah gambar sawah yang merahgambar ini adalah gambar sawah yang merahgambar ini adalah gambar sawah yang merahgambar ini adalah gambar sawah yang merahgambar ini adalah gambar sawah yang merah</small>              
+  </div>
+  <div style="cursor: pointer;" onclick="theFunction('3')"> 
+    <img class="center" src="https://i.pinimg.com/474x/5c/fd/a0/5cfda023aa7e5b3620b3669c3a2cd1f7.jpg" class="img-responsive" />
+    <h5>Pemandangan ketiga</h5>
+    <small style="font-size: 15px;">gambar ini adalah gambar sawah yang biru gambar ini adalah gambar sawah yang birugambar ini adalah gambar sawah yang birugambar ini adalah gambar sawah yang birugambar ini adalah gambar sawah yang biru</small>
+  </div>
+  <div style="cursor: pointer;" onclick="theFunction('4')"> 
+    <img class="center" src="https://i.pinimg.com/474x/5c/fd/a0/5cfda023aa7e5b3620b3669c3a2cd1f7.jpg" class="img-responsive" />
+    <h5>Pemandangan keempat</h5>
+    <small style="font-size: 15px;">gambar ini adalah gambar sawah yang kuninggambar ini adalah gambar sawah yang birugambar ini adalah gambar sawah yang birugambar ini adalah gambar sawah yang birugambar ini adalah gambar sawah yang biru</small>
+    </div>
+</div>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content" id="nomor">
+      <span class="close">&times;</span>
+      <p></p> 
+         
+    </div>
+  
+  </div>
+<script>
+    function theFunction(nomor) {
+        modal.style.display = "block";
+        document.getElementById("nomor").innerHTML="Berikut ini adalah detail dari foto pemandangan ke " + nomor;
+}
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+   
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+    
+</body>
+</html>
